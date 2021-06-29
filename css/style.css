@@ -2,6 +2,57 @@
       width: 100%;
 }
 
+.space {
+      margin-top: 24px;
+      margin-bottom: 24px;
+}
+
 #newTaskElement{
       width: 100%;
 }
+
+
+.input-area button{
+      width: calc(100% - 12px) ;
+      margin-left: 12px;
+      border-radius: 12px;
+      border: 1px solid #ddd
+}
+
+.list-content{
+      background-color: #f5f7f7;
+      list-style: none;
+      
+}
+
+/* usiamo margini per non toccare i 
+padding colonne di bootstrap (e il css, potremmo
+usare gli Spacing m p */
+
+.list-content li {
+      margin: 0 24px;
+      padding: 0 12px;
+      display: flex;
+      justify-content: space-between;
+      height: 32px;
+      align-items: center;
+}
+
+.list-content li i {
+      cursor: pointer;
+}
+
+.list-content li:hover{
+      background-color: white;
+}
+
+.list-content li:first-child{
+      margin-top: 24px;
+}
+
+.list-content li:last-child{
+      margin-bottom: 24px;
+}
+
+
+

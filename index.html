@@ -14,7 +14,7 @@
       <div id="app">
 
             <div container>
-                  <div class="row justify-content-center ">
+                  <div class="row justify-content-center space">
                         <div class="col-4">
                               <img class="logo" src="./img/logo.png" alt="logo">
                         </div>
@@ -22,22 +22,22 @@
 
             <!-- aggiunto id a input per gestire focus del campo inserimento
             in js all interno di mounted -->
-                  <div class="row justify-content-center">
+                  <div class="row justify-content-center input-area space">
                         <div class=col-8>
                               <div class="row">
-                                    <div class="col-8">
+                                    <div class="col-8 p-0">
                                           <input id="newTaskElement" v-model="newTask" @keyup.enter="addTask" placeholder="inserisci">
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-4 p-0">
                                           <button @click="addTask">Aggiungi</button>
                                     </div>
                               </div>
                         </div>
                    </div>
-                   <div class="row justify-content-center">
-                        <ul class="col-8">
+                   <div class="row justify-content-center area ">
+                        <ul class="col-8 list-content">
                               <li v-for="(task, index) in toDoList">
-                                    {{task}}
+                                    <span>{{task}}</span>
                               <i class="far fa-check-circle" @click="deleteTask(index)">
                                     
                               </i>
