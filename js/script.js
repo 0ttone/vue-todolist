@@ -14,9 +14,17 @@ const app = new Vue(
                   'posta',
                   'benzina',
                 ],
-                
+
             newTask:'',
           },
+
+
+          mounted () {
+                const element = document.getElementById('newTaskElement');
+                element.focus();
+          },
+
+
 
           methods: {
                 //creiamo addTask semplicemente costruendo una funzione che 
@@ -28,6 +36,16 @@ const app = new Vue(
                       //con questa istruzione ripuliamo il campo di input
                       this.newTask = '';
                 },
+
+            //     creiamo la funzione deleteTask sfruttando splice e
+            //    la possiblilità di agire sul dato index sfruttando 
+                  deleteTask: function (index){
+                        console.log(index)
+                        //non è necessario assegnarla si autodichiara
+                        //splice agisce sull originale come push 
+                        this.toDoList.splice(index, 1)
+                  }
+
 
                   
 

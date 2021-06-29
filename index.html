@@ -14,15 +14,17 @@
       <div id="app">
             <!-- aggiunto id a input per gestire focus del campo inserimento
             in js all interno di mounted -->
-            
+
             <input id="newTaskElement" v-model="newTask" @keyup.enter="addTask" placeholder="inserisci">
             <button @click="addTask">Aggiungi</button>
 
             <ul>
-                  <li v-for="task in toDoList">
-                   <i class="far fa-check-circle">
-                         {{task}}
+                  <li v-for="(task, index) in toDoList">
+                        {{task}}
+                   <i class="far fa-check-circle" @click="deleteTask(index)">
+                         
                    </i>
+                   
  
                   </li>
              </ul>
